@@ -13,7 +13,7 @@ const app = express();
 app.set('view engine', 'ejs');
 
 app.get('/', function(req, res){
-  res.render('home');
+  res.render('home', {startingContent: homeStartingContent});
 });
 
 app.use(bodyParser.urlencoded({extended: true}));
