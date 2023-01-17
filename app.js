@@ -24,6 +24,10 @@ app.get('/contact', function(req, res){
   res.render('contact', {contactContent: contactContent});
 });
 
+app.get('/compose', function(req, res){
+  res.render('compose');
+});
+
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
