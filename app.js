@@ -52,10 +52,12 @@ app.get('/posts/:postName', function(req,res){
     const storedTitle = _.lowerCase(post.title);
     
     if(storedTitle === requestedTitle){
-      console.log('match found!');
-    } else {
-      console.log('not a match!')
-    }
+      res.render('post', {
+        title: post.title,
+        content: post.content
+      });
+    } 
+
   });
 
 });
